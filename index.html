@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Celeine Méndez Portafolio</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+
+
+  <!DOCTYPE html>
+  <html lang="es">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio - Habilidades</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+      /* Estilos generales del cuerpo */
+
+
+      /* Estilos para la sección de habilidades */
+      .skills.section {
+        padding: 40px 0;
+        /* Menos padding superior/inferior para la sección */
+        background-color: #f8f9fa;
+      }
+
+
+      /* Contenedor principal de habilidades */
+      .skills-content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        /* Menos espacio entre los cuadros */
+        justify-content: center;
+        max-width: 1000px;
+        /* Ancho máximo un poco menor */
+        margin: 0 auto;
+        padding: 15px;
+        /* Menos padding en el contenedor general */
+      }
+
+      /* Estilo para cada columna de habilidad (el "cuadro") */
+      .skills-content .col-lg-6 {
+        flex: 1 1 calc(50% - 15px);
+        /* Dos columnas por fila, ajustado al nuevo gap */
+        background: #ffffff;
+        padding: 20px;
+        /* Menos padding interno */
+        border-radius: 8px;
+        /* Bordes ligeramente menos redondeados */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        /* Sombra similar, o un poco más suave */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        min-width: 250px;
+        /* Ancho mínimo más pequeño */
+        border: 1px solid #eee;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .skills-content .col-lg-6:hover {
+        transform: translateY(-5px);
+        /* Menos elevación al pasar el ratón */
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        /* Sombra un poco menos pronunciada al pasar el ratón */
+      }
+
+      /* Títulos de las categorías de habilidades */
+      .skills-content h3 {
+        color: #2c3e50;
+        font-size: 1.5em;
+        /* Títulos de categoría más pequeños */
+        margin-bottom: 15px;
+        /* Menos margen inferior */
+        border-bottom: 2px solid #17babf;
+        ;
+        /* Línea más delgada */
+        padding-bottom: 8px;
+        /* Menos padding para la línea */
+        display: inline-block;
+        font-weight: 700;
+      }
+
+      /* Lista de habilidades */
+      .skills-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        flex-grow: 1;
+      }
+
+      .skills-content ul li {
+        padding: 6px 0;
+        /* Menos padding para cada elemento de la lista */
+        font-size: 1em;
+        /* Texto de habilidad un poco más pequeño */
+        color: #555;
+        display: flex;
+        align-items: center;
+      }
+
+      .skills-content ul li:before {
+        content: "✓";
+        color: #131413;
+        margin-right: 8px;
+        /* Menos espacio para el checkmark */
+        font-weight: bold;
+        font-size: 1em;
+        /* Checkmark del mismo tamaño que el texto */
+      }
+
+      /* Animación */
+      .skills-animation {
+        opacity: 0;
+        animation: fadeIn 0.8s ease-out forwards;
+        /* Animación un poco más rápida */
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 992px) {
+        .skills-content .col-lg-6 {
+          flex: 1 1 calc(50% - 15px);
+          /* Mantiene 2 columnas en pantallas más pequeñas si cabe */
+        }
+      }
+
+      @media (max-width: 768px) {
+
+        /* Ajuste para tablets, ahora a una columna más temprano */
+        .skills-content .col-lg-6 {
+          flex: 1 1 calc(100% - 15px);
+          /* Una columna por fila */
+        }
+      }
+
+      @media (max-width: 500px) {
+
+        /* Ajuste para móviles muy pequeños */
+        .skills-content .col-lg-6 {
+          min-width: unset;
+          /* Permite que el ancho se ajuste completamente */
+          padding: 15px;
+          /* Reducir aún más el padding en pantallas muy pequeñas */
+        }
+
+        .skills-content h3 {
+          font-size: 1.3em;
+        }
+
+        .skills-content ul li {
+          font-size: 0.9em;
+        }
+      }
+    </style>
+
+    <!-- =======================================================
+  * Template Name: iPortfolio
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Updated: Jun 29 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  </head>
+
+<body class="index-page">
+
+  <header id="header" class="header dark-background d-flex flex-column">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="profile-img">
+      <img src="assets/img/my-profile-img.jpg" alt="" class="img-fluid rounded-circle">
+    </div>
+
+    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+      <!-- Uncomment the line below if you also wish to use an image logo -->
+      <!-- <img src="assets/img/logo.png" alt=""> -->
+      <h1 class="sitename">Celeine E. Méndez S.</h1>
+    </a>
+
+    <div class="social-links text-center">
+      <a href="https://www.linkedin.com/in/celeinemendez?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+        class="linkedin"><i class="bi bi-linkedin"></i></a>
+    </div>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Inicio</a></li>
+        <li><a href="#about"><i class="bi bi-person navicon"></i> Acerca de</a></li>
+        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resumen</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in" class="">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <h2>Celeine E. Méndez S.</h2>
+        <p>Soy <span class="typed" data-typed-items="Ingeniero Informático, Desarrollador Web">Desarrollador Web</span><span
+            class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span
+            class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Acerca de</h2>
+        <p style="text-align: justify;"> Ingeniero en informática con una sólida especialización en el desarrollo de aplicaciones web. A lo largo de
+          mi
+          carrera, he adquirido una profunda comprensión de las tecnologías más avanzadas y de las mejores prácticas en
+          el ámbito del desarrollo web. Además, cuento con experiencia en la gestión y liderazgo de proyectos,
+          coordinando equipos multidisciplinarios para asegurar la entrega exitosa de soluciones web robustas y
+          escalables. Mi pasión por la innovación y mi enfoque en la eficiencia y la calidad me han permitido diseñar y
+          crear soluciones efectivas que cumplen con las expectativas de los clientes. Estoy comprometido con el
+          aprendizaje continuo y con la aplicación de conocimientos para resolver problemas complejos y aportar valor a
+          los proyectos en los que participo.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4 justify-content-center">
+
+          <div class="col-lg-8 content">
+            <h2>Desarrollador Web</h2>
+            <p class="fst-italic py-3">
+
+            </p>
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Fecha Nacimiento:</strong> <span>31 Julio 1997</span>
+                  </li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Teléfono:</strong> <span>+58 4142390107</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Ubicación</strong> <span>Caracas - Venezuela</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Profesión:</strong> <span> Ing. Informática</span>
+                  </li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>celeinemendez@gmail.com</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+              <div class="col-lg-8 content"><br>
+            <h3>Experiencia Profesional</h3>
+            <p class="fst-italic py-3">
+
+            </p>
+       <div class="row">
+  <div class="col-lg-12">
+
+    <div style="margin-bottom: 20px;">
+      <p><i class="bi bi-chevron-right"></i> <strong>Empresa:</strong> BIT CONSULTING 2013 C.A</p>
+      <p><strong>Junio 2019 - Octubre 2019</strong></p>
+      <p><strong>Cargo:</strong> Pasante</p>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+      <p><i class="bi bi-chevron-right"></i> <strong>Empresa:</strong> BIT CONSULTING 2013 C.A</p>
+      <p><strong>2019 - Actual</strong></p>
+      <p><strong>Cargo:</strong> Consultor Técnico Senior / Coordinador de Área de Desarrollo</p>
+    </div>
+
+  </div>
+</div>
+
+            <p class="py-3">
+
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+
+
+        </div>
+
+    </section><!-- /Stats Section -->
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section light-background">
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Habilidades</h2>
+      </div>
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row skills-content skills-animation">
+
+          <div class="col-lg-6">
+            <h3>Backend</h3>
+            <ul>
+              <li>Java</li>
+              <li>NodeJS</li>
+            </ul>
+          </div>
+
+          <div class="col-lg-6">
+            <h3>Frontend</h3>
+            <ul>
+              <li>Javascript</li>
+              <li>HTML</li>
+              <li>CSS/SCSS</li>
+              <li>Angular</li>
+            </ul>
+          </div>
+
+          <div class="col-lg-6">
+            <h3>Base de Datos</h3>
+            <ul>
+              <li>Oracle</li>
+              <li>MySQL</li>
+              <li>SQL Server</li>
+              <li>MongoDB</li>
+            </ul>
+          </div>
+
+          <div class="col-lg-6">
+            <h3>Metodologías</h3>
+            <ul>
+              <li>SCRUM</li>
+              <li>Git / SVN</li>
+            </ul>
+          </div>
+
+          <div class="col-lg-6">
+            <h3>Tecnologías y Herramientas</h3>
+            <ul>
+              <li>Postman, SoapUI</li>
+              <li>JMeter, JUnit</li>
+              <li>JasperReport</li>
+              <li>Metabase</li>
+              <li>Apache Flink / Kafka</li>
+            </ul>
+          </div>
+
+          <div class="col-lg-6">
+            <h3>DevOps y Servidores</h3>
+            <ul>
+              <li>Docker</li>
+              <li>WebSphere</li>
+              <li>Payara</li>
+              <li>Tomcat</li>
+              <li>Apache Server</li>
+              <li>Jenkins</li>
+              <li>Linux</li>
+              <li>Windows</li>
+            </ul>
+          </div>
+
+          <div class="col-lg-6">
+            <h3>Idiomas</h3>
+            <ul>
+              <li>Castellano</li>
+              <li>Inglés Técnico</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Resumen</h2>
+        <p></p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Contacto</h3>
+
+            <div class="resume-item pb-0">
+              <h4>Celeine Méndez</h4>
+              <p><em></em></p>
+              <ul>
+                <li>Caracas - Venezuela</li>
+                <li>(+58) 414-2390107</li>
+                <li>celeinemendez@gmail.com</li>
+              </ul>
+            </div><!-- Edn Resume Item -->
+
+            <h3 class="resume-title">Educacion</h3>
+            <div class="resume-item">
+              <h4>Estudios Primarios</h4>
+              <h5>2010 - 2014</h5>
+              <p><em>Bachiller en Ciencias.</em></p>
+              <p> Unidad Educativa Instituto “San Antonio”. Calle Machado,
+                con Calle Los Naranjos, Edif. Colegio San Antonio, Antes del Club de la GN, El
+                Paraíso, Caracas</p>
+            </div><!-- Edn Resume Item -->
+
+            <div class="resume-item">
+              <h4> Estudios Universitarios.</h4>
+              <h5>2015 - 2019</h5>
+              <p><em>Ingeniero en Informática, Mención Gestión de datos</em></p>
+              <p> Universidad Experimental Marítima del Caribe. Vargas, Catia La Mar. </p>
+            </div><!-- Edn Resume Item -->
+
+
+            <div data-aos="fade-up" data-aos-delay="200">
+              <h3 class="resume-title">Experiencia Profesional</h3>
+              <div class="resume-item">
+                <h4> Proyectos FreeLance </h4>
+                <h5>2025 - Actual</h5>
+                <p><em> Proyecto: Desarrollo de Aplicación Web para el Sector Retail </em></p>
+                <ul>
+                  <li> Desarrollo desde cero una aplicación web completa para una empresa de retail, cubriendo
+                    funcionalidades de gestión de inventario,
+                    ventas, compras ,clientes, reportería, dashboard.</li>
+                  <li> Diseñé e implementé una arquitectura de microservicios con Java 21 y Spring Boot, orquestada con
+                    API Gateway y Eureka Server para
+                    asegurar una comunicación desacoplada y escalable. </li>
+                  <li> Creé una interfaz de usuario moderna y reactiva con Angular 18, enfocada en la experiencia de
+                    usuario y el rendimiento.</li>
+                  <li> Automaticé el despliegue de los servicios empaquetándolos en contenedores Docker y configuré un
+                    Load Balancer para garantizar la alta
+                    disponibilidad de la aplicación.</li>
+                  <li>Gestioné la base de datos en SQL Server, desde el diseño del esquema hasta la implementación de
+                    consultas optimizadas.
+                  </li>
+
+                </ul>
+
+
+              </div><!-- Edn Resume Item -->
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="resume-title">Experiencia Profesional</h3>
+            <div class="resume-item">
+              <h4> Grupo COE-BitConsulting: Consultor Técnico-</h4>
+              <h5>2019 - Actual</h5>
+              <p><em> Desarrollador Full Stack - Coordinadora de Área Desarrollo</em></p>
+              <ul>
+                <li> Desarrollar e implementar aplicaciones web complejas utilizando el ecosistema Spring (Spring Boot,
+                  MVC, Data, Security, IoC) e
+                  Hibernate, enfocadas en la gestión eficiente del efectivo para el sector financiero.</li>
+                <li> Diseñar y modelar arquitecturas de microservicios con Java 21, asegurando la comunicación
+                  desacoplada y escalable a través de API
+                  Gateway y Eureka Server. </li>
+                <li> Construir y mantener APIs REST y servicios web SOAP para facilitar la integración entre sistemas
+                  internos y plataformas de proveedores
+                  externos en Java 8.</li>
+                <li>Liderar el análisis de requerimientos funcionales y su traducción a especificaciones técnicas,
+                  participando activamente en el diseño de la
+                  arquitectura de las soluciones.</li>
+                <li>Diseñar e implementar un pipeline de datos (ETL) para habilitar la inteligencia de negocio,
+                  utilizando Apache Flink para procesar y
+                  transferir datos desde SQL Server hacia MongoDB. Esta nueva arquitectura permitió la creación de
+                  dashboards y reportes estratégicos
+                  en Metabase, mejorando significativamente el acceso a la información para la toma de decisiones.</li>
+                <li>Automatizar el ciclo de vida de integración y despliegue continuo (CI/CD) configurando pipelines en
+                  Jenkins y en Gitlab, lo que redujo los
+                  tiempos de entrega de software y minimizó los errores de despliegue manual.</li>
+
+              </ul>
+
+              <h5> Gestión de Infraestructura y Bases de Datos:</h5>
+              <ul>
+                <li> Administrar el despliegue de aplicaciones en servidores como WebSphere, Payara, Tomcat y Apache,
+                  utilizando contenedores Docker
+                  para estandarizar los entornos y agilizar los pases a producción.</li>
+                <li>Diseñar, modelar y gestionar bases de datos relacionales (Oracle, SQL Server, MySQL), escribiendo
+                  scripts complejos en PL/SQL y
+                  manejando sentencias DDL, DML y DCL para la correcta estructuración y mantenimiento de los datos.</li>
+                <li> Implementar y mantener Linked Servers para la comunicación entre distintas instancias de bases de
+                  datos</li>
+              </ul>
+
+              <h5> Calidad, Soporte y Liderazgo Técnico:</h5>
+              <ul>
+                <li> Asegurar la calidad del código implementando pruebas unitarias con JUnit y utilizando herramientas
+                  como Postman, SoapUI y JMeter
+                  para pruebas de integración y rendimiento.</li>
+                <li>Gestión del versionamiento del código fuente con Git y SVN dentro de un marco de trabajo basado en
+                  la metodología ágil SCRUM.</li>
+                <li> Soporte especializado a aplicativos en producción, diagnosticando y resolviendo incidencias
+                  críticas con técnicas avanzadas de
+                  debugging.</li>
+                <li>Capacitación y mentoría a desarrolladores del equipo en tecnologías y buenas prácticas, y elaboré la
+                  documentación técnica de los
+                  proyectos.</li>
+              </ul>
+            </div><!-- Edn Resume Item -->
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Resume Section -->
+
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Cursos</h2>
+        <p>Cursos y certificaciones realizados para fortalecer conocimientos técnicos, mantenerse
+          actualizado en tendencias actuales del sector y desarrollar competencias especializadas.
+
+        </p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 1,
+                  "spaceBetween": 40
+                },
+                "1200": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 1
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <span> • <a href="https://www.udemy.com/certificate/UC-79675eac-69cd-45f2-908d-73bf997b794e/"
+                      target="_blank">Microservicios Guía Completa de Docker & Kubernates</a></span><br>
+                  <span> • Reactive Redis MasterClass Fr Java Sprint Boot Developers</span>
+                </p>
+
+                <h3>2025</h3>
+                <h4></h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                 <span>• <a href="https://www.udemy.com/certificate/UC-b9823e1f-9d0e-4a03-a7af-a87e724def14/" target="_blank">Microservicios Spring Boot 3, Eureka, Spring Cloud Gateway, LoadBalancer, Resilience4J, Rest, OAuth, Docker — Implementación de Arquitectura de software a gran escala</a></span><br>
+                  <br>
+                  <span>•  <a href="https://www.udemy.com/certificate/UC-00814534-a106-46e6-943b-aa84c83e1a5c/" target="_blank"> Implementación de Arquitectura
+                    de software a gran escala </a></span>
+
+                </p>
+                <h3>2024</h3>
+                <h4></h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <span>• <a href="https://www.udemy.com/certificate/UC-a1f15aac-907e-45ab-819d-92e698e0acdb/" target="_blank">Curso de Node . Udemy . Rest, despliegues, Heroku, Mongo, Git, GitHub,
+                    Sockets, archivos, JWT .</a> </span>
+                </p>
+                <h3>2023</h3>
+                <h4></h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <span>• Curso Ionic 6+ .</span>
+                </p>
+                <h3>2022</h3>
+                <h4></h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <span>• Curso Online Aprende SQL Instituto Tecnológico Telefónica
+                    MIRÍADAX</span>
+                </p>
+                <h3>2020</h3>
+                <h4></h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <span>• Instituto Keys. Curso de Especialista e Instalador en Redes. Materias Cursadas:
+                    Arquitectura del computador Hardware en Redes Cableado Estructurado
+                    Windows.</span> <br>
+                  <span>• Ingeniero en Redes. Materias a cursar: Servidor Nivel 1-2 Intranet
+                    TCP-IP.</span>
+                </p>
+                <h3>2019</h3>
+                <h4></h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <span>• Septiembre 2017. Diplomado de Programación Web Materias Cursadas: Lógica
+                    de Programación, HTML ,HTML 5, PHP Nivel 1, PHP Nivel 2, PHP Nivel 3 PHP
+                    Nivel 4, MySQL, PostgreSQL, JQuery, JavaScript y Proyecto Final. UNEWEB. </span>
+                </p>
+                <h3>2017</h3>
+                <h4></h4>
+              </div>
+            </div>
+
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section><!-- /Testimonials Section -->
+
+
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename"></strong> <span>All Rights Reserved</span>
+        </p>
+      </div>
+      <div class="credits">
+
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
